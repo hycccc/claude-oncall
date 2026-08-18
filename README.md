@@ -1,5 +1,6 @@
 # claude-oncall
 
+[![ci](https://github.com/hycccc/claude-oncall/actions/workflows/ci.yml/badge.svg)](https://github.com/hycccc/claude-oncall/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-1fa88c.svg)](LICENSE)
 
 **A production sidecar pattern for the [Claude Agent SDK](https://docs.anthropic.com/en/api/agent-sdk/overview)** — extracted from the ops agent that runs my music-label platform. One Express process gives a web app an embedded oncall agent with sessions, live streaming, git-snapshot revert, daily briefs, proactive monitoring, and opt-in self-reflection.
