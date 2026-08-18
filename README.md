@@ -1,5 +1,7 @@
 # claude-oncall
 
+> **📦 Merged into [soundlabel](https://github.com/hycccc/soundlabel)** (v0.4.0, Aug 2026) as the label's ops sidecar — [`soundlabel/ops/`](https://github.com/hycccc/soundlabel/tree/main/ops). This repo is archived; development continues there.
+
 [![ci](https://github.com/hycccc/claude-oncall/actions/workflows/ci.yml/badge.svg)](https://github.com/hycccc/claude-oncall/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-1fa88c.svg)](LICENSE)
 
