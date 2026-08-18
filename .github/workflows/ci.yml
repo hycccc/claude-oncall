@@ -1,0 +1,22 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm ci
+      - name: syntax-check every module
+        run: for f in src/*.mjs; do node --check "$f"; done
+      - name: boot smoke test (no API key — server must still come up)
+        run: |
+          PORT=19833 node src/server.mjs &
+          curl -sf --retry 20 --retry-delay 1 --retry-connrefused http://localhost:19833/health
